@@ -1,0 +1,30 @@
+name: C Maze Generation Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout du code source
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Installation des outils nécessaires (make, gcc, etc.)
+    - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y build-essential
+
+    # Compilation du projet
+    - name: Build
+      run: make
+
+    # Exécution des tests
+    - name: Run tests
+      run: make test
