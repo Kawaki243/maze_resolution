@@ -10,7 +10,8 @@ This project is a maze generator and solver written in C. It allows you to creat
 
 ├── include/  
 │   ├── maze.h  
-│   └── maze_generator.h  
+│   └── maze_generator.h 
+|   └── path_finding.h 
 ├── src/  
 │   ├── main.c  
 │   ├── maze.c  
